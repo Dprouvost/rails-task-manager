@@ -1,0 +1,8 @@
+  <h2> <%= @task.title %> </h2>
+  <p> <%= @task.details %> </p>
+  <p> <%= @task.completed %> </p>
+
+  <%=link_to "Edit", task_edit_path(@task.id), class: "btn btn-primary"  %>
+  <%=link_to "Delete", task_destroy_path,
+  method: :delete,
+  data: { confirm: "Are you sure?" }  %>
